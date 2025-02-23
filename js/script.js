@@ -21,6 +21,7 @@ setaDireita.addEventListener('click', () => {
     const diaAtual = data.getDate()
     const mesAtual = data.getMonth() + 1
     const anoAtual = data.getFullYear()
+    const diaTotal = data.getUTCDate()
     const diasNoAno = bissexto(anoAtual) ? 366 : 365
 
     
@@ -30,7 +31,7 @@ setaDireita.addEventListener('click', () => {
 
     })
 
-    dataElement.textContent = `${diaAtual} / ${diasNoAno}`
+    dataElement.textContent = `${diaTotal} / ${mesAtual}`
 })
 
 function bissexto(year) {
